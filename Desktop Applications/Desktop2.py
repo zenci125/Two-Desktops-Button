@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import ttk
 import random
 
 def change_color():
@@ -12,7 +13,10 @@ def change_color():
     
 root = Tk()
 
-button = Button(root, text="Change picture", command=change_color)
-button.pack()
+frame = ttk.Frame(root, padding=100)
+frame.grid()
+
+button = ttk.Button(frame, text="Change picture", command=change_color)
+button.grid()
 
 root.mainloop()
